@@ -1,0 +1,26 @@
+
+
+<!DOCTYPE html>
+<html>
+    <title></title>
+    <head></head>
+    <body>
+        <h2>Register</h2>
+        <form action="{% url 'register' %}" method="post">
+        {% csrf_token %}
+
+            <p><label for="email">Email: </label>
+                <input id="email" type="text" name="email"></p>
+                <p><label for="first_name">First_name: </label>
+                <input id="first_name" type="text" name="first_name"></p>
+                <p><label for="last_name">Last_name: </label>
+                <input id="last_name" type="text" name="last_name"></p>
+                <p><label for="username">username: </label>
+                <input id="username" type="text" name="username"></p>
+                <p><label for="password">password: </label>
+                    <input id="password" type="text" name="password"></p>
+          <button type="submit">Register</button>
+        </form>
+        <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+    </body>
+</html>
